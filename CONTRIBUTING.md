@@ -6,20 +6,20 @@
 1. Clone the project, and install dependencies.
 
 ```bash
-$ git clone https://github.com/danrevah/typeserializer.git
+$ git clone https://github.com/danrevah/essential-decorators.git
 $ npm install
 ```
 
 2. Create a new branch
 
 ```bash
-$ git checkout -b feat/myFeature 
+$ git checkout -b feat/feature 
 ```
 
 * OR: *
 
 ```bash
-$ git checkout -b fix/myBugFix 
+$ git checkout -b fix/bug 
 ```
 
 Add tests & make sure everything is running properly.
