@@ -1,7 +1,7 @@
 {
-  "name": "typeserializer",
-  "version": "0.2.3",
-  "description": "TypeSerializer, designed to make prettier code while using exclusion strategies on objects.",
+  "name": "essentialdecorators",
+  "version": "0.0.1",
+  "description": "EssentialDecorators, useful helpers and utilities as TypeScript decorators",
   "main": "dist/index.js",
   "scripts": {
     "test": "NODE_ENV=test mocha -r ts-node/register src/*.spec.ts src/**/*.spec.ts",
@@ -15,21 +15,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danrevah/typeserializer.git"
+    "url": "git+https://github.com/danrevah/essentialdecorators.git"
   },
   "keywords": [
     "typescript",
-    "serializer",
-    "serialize",
     "decorator",
-    "decorators"
+    "decorators",
+    "utilities",
+    "utils",
+    "helpers"
   ],
   "author": "Dan Revah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danrevah/typeserializer/issues"
+    "url": "https://github.com/danrevah/essentialdecorators/issues"
   },
-  "homepage": "https://github.com/danrevah/typeserializer#readme",
+  "homepage": "https://github.com/danrevah/essentialdecorators#readme",
   "devDependencies": {
     "@types/chai": "^4.0.5",
     "@types/mocha": "^2.2.44",
@@ -46,9 +47,6 @@
     "ts-node": "^3.3.0",
     "typescript": "^2.6.1",
     "wrappy": "^1.0.2"
-  },
-  "dependencies": {
-    "reflect-metadata": "^0.1.10"
   },
   "nyc": {
     "include": [
