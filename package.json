@@ -9,9 +9,13 @@
     "build:lib": "rm -rf dist && ntsc",
     "release": "standard-version",
     "deploy": "npm run build:lib && cp package.json dist/package.json && cp README.md dist/README.md && npm publish --access=public dist",
-    "precommit": "lint-staged",
     "prettier:write": "prettier --write './src/**/*.ts'",
     "prettier:check": "prettier -l './src/**/*.ts'"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
   },
   "repository": {
     "type": "git",
