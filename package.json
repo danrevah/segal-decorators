@@ -14,7 +14,8 @@
   },
   "husky": {
     "hooks": {
-      "precommit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "repository": {
@@ -36,10 +37,14 @@
   },
   "homepage": "https://github.com/danrevah/essentialdecorators#readme",
   "devDependencies": {
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "@commitlint/travis-cli": "^7.6.1",
     "@types/chai": "^4.0.5",
     "@types/mocha": "^5.2.6",
     "@types/node": "^12.0.2",
     "chai": "^4.1.2",
+    "conventional-changelog-atom": "^2.0.1",
     "coveralls": "^3.0.0",
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",

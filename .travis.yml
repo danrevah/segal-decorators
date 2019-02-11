@@ -1,5 +1,7 @@
 sudo: required
 language: node_js
+script:
+  - commitlint-travis
 node_js:
   - current
   - stable
@@ -7,5 +9,5 @@ node_js:
   - 7
   - 6
 
-after_success: 
+after_success:
   - npm run cover | coveralls
