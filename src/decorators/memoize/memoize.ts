@@ -14,8 +14,6 @@ function decorator(fn: (...args: any[]) => any, hashFn?: (...args: any[]) => str
       return cache[hash];
     }
 
-    return cache[hash] = fn.apply(this, args);
+    return (cache[hash] = fn.apply(this, args));
   };
 }
-
-

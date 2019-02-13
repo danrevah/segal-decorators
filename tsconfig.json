@@ -13,7 +13,7 @@
         "declaration": true,
         "noFallthroughCasesInSwitch": true,
         "strictNullChecks": true,
-        "noUnusedLocals": true
+        "noUnusedLocals": false
     },
     "exclude": [
         "node_modules"
