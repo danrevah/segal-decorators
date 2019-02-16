@@ -2,7 +2,6 @@ import { expect } from 'chai';
 import 'mocha';
 import { Memoize } from './memoize';
 
-
 class TestMemoize {
   counter = 0;
 
