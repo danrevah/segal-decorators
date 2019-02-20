@@ -10,6 +10,11 @@ class TestMemoize {
     return ++this.counter;
   }
 
+  @Memoize()
+  async asyncCount(...args: any[]) {
+    return ++this.counter;
+  }
+
   @Memoize(mock)
   countHash(...args: any[]) {
     return ++this.counter;
@@ -37,5 +42,12 @@ describe('Memoize', () => {
     expect(mock).not.toBeCalled();
     test.countHash();
     expect(mock).toBeCalled();
+  });
+
+  it('should work with promises', async () => {
+    const test = new TestMemoize();
+    expect(await test.asyncCount(1)).toEqual(1);
+    expect(await test.asyncCount(1)).toEqual(1);
+    expect(await test.asyncCount(2)).toEqual(2);
   });
 });
