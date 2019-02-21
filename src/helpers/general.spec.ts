@@ -1,4 +1,4 @@
-import { isObject, isUndefined } from './helpers';
+import { isObject, isUndefined } from './general';
 
 describe('Helpers', () => {
   it('should check isUndefined', () => {

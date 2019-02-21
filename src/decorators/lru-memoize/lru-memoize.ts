@@ -1,10 +1,10 @@
 import { generateFunctionDecorator, isUndefined } from '../../helpers/general';
 
-export function Memoize(hashFn?: (...args: any[]) => string) {
-  return generateFunctionDecorator('Memoize', decorator, hashFn);
+export function LruMemoize(maxStorage: number, hashFn?: (...args: any[]) => string) {
+  return generateFunctionDecorator('LruMemoize', decorator);
 }
 
-function decorator(fn: (...args: any[]) => any, hashFn?: (...args: any[]) => string) {
+function decorator(fn: (...args: any[]) => any, maxStorage: number, hashFn?: (...args: any[]) => string) {
   const cache: { [key: string]: any } = {};
 
   return function(...args: any[]) {
