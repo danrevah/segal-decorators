@@ -1,10 +1,10 @@
 import { isUndefined } from './general';
 
-interface Node<T> {
-  prev?: Node<T>
-  next?: Node<T>
-  value: T,
-  key: string
+export interface Node<T> {
+  prev?: Node<T>;
+  next?: Node<T>;
+  value: T;
+  key: string;
 }
 
 export class LRU<T> {
@@ -16,21 +16,17 @@ export class LRU<T> {
   constructor(private maxStorage: number) {}
 
   get(key: string): T | undefined {
-    return !isUndefined(this.cache[key])
-      ? this.cache[key].value
-      : undefined;
+    return !isUndefined(this.cache[key]) ? this.cache[key].value : undefined;
   }
 
   insert(key: string, value: T): void {
     if (this.totalStorage >= this.maxStorage) {
-
       if (!isUndefined(this.get(key))) {
         this.remove(key);
       } else {
         const { key } = <Node<T>>this.tail;
         this.remove(key);
       }
-
     }
 
     const node: Node<T> = { key, value, next: this.head };

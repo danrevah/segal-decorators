@@ -1,19 +1,26 @@
 import { generateFunctionDecorator, isUndefined } from '../../helpers/general';
+import { LRU } from '../../helpers/lru';
 
 export function LruMemoize(maxStorage: number, hashFn?: (...args: any[]) => string) {
-  return generateFunctionDecorator('LruMemoize', decorator);
+  return generateFunctionDecorator('LruMemoize', decorator, maxStorage, hashFn);
 }
 
-function decorator(fn: (...args: any[]) => any, maxStorage: number, hashFn?: (...args: any[]) => string) {
-  const cache: { [key: string]: any } = {};
+function decorator<T>(fn: (...args: any[]) => any, maxStorage: number, hashFn?: (...args: any[]) => string) {
+  const cache = new LRU(maxStorage);
 
   return function(...args: any[]) {
-    const hash = hashFn ? hashFn.apply(this, args) : JSON.stringify(args);
+    const key = hashFn ? hashFn.apply(this, args) : JSON.stringify(args);
+    const value: T = cache.get(key) as T;
 
-    if (!isUndefined(cache[hash])) {
-      return cache[hash];
+    if (!isUndefined(value)) {
+      return value;
     }
 
-    return (cache[hash] = fn.apply(this, args));
+    const response = fn.apply(this, args);
+
+    cache.insert(key, response);
+
+
+    return response;
   };
 }
