@@ -20,7 +20,6 @@ function decorator<T>(fn: (...args: any[]) => any, maxStorage: number, hashFn?: 
 
     cache.insert(key, response);
 
-
     return response;
   };
 }
