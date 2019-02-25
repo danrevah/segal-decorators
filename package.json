@@ -1,7 +1,7 @@
 {
-  "name": "EssentialDecorators",
+  "name": "essential-decorators",
   "version": "0.0.1",
-  "description": "EssentialDecorators, useful helpers and utilities as TypeScript decorators",
+  "description": "essential-decorators, useful helpers and utilities as TypeScript decorators",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",

@@ -1,3 +1,4 @@
+
 import { LruMemoize } from './lru-memoize';
 
 class TestLruMemoize {

@@ -17,7 +17,7 @@ A clear and concise description of what you expected to happen.
  - OS: [e.g. iOS]
  - Node version [e.g. 8.9.0]
  - Npm version [e.g. 5.4.0]
- - EssentialDecorators Version [e.g. 0.2.9]
+ - essential-decorators Version [e.g. 0.2.9]
 
 **Additional context**
 Add any other context about the problem here.
