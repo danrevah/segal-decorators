@@ -5,15 +5,17 @@ export function Memoize(hashFn?: (...args: any[]) => string) {
 }
 
 function decorator(fn: (...args: any[]) => any, hashFn?: (...args: any[]) => string) {
-  const cache: { [key: string]: any } = {};
+  const cache: { [key: string]: { value: string } } = {};
 
   return function(...args: any[]) {
-    const hash = hashFn ? hashFn.apply(this, args) : JSON.stringify(args);
+    const key = hashFn ? hashFn.apply(this, args) : JSON.stringify(args);
 
-    if (!isUndefined(cache[hash])) {
-      return cache[hash];
+    if (!isUndefined(cache[key])) {
+      return cache[key].value;
     }
 
-    return (cache[hash] = fn.apply(this, args));
+    cache[key] = { value: fn.apply(this, args) };
+
+    return cache[key].value;
   };
 }
