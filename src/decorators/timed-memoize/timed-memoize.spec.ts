@@ -10,7 +10,7 @@ class TestTimedMemoize {
 }
 
 describe('TimedMemoize', () => {
-  it('should really invalidate cache',() => {
+  it('should really invalidate cache', () => {
     const past = Date.now() + 50000;
     const test = new TestTimedMemoize();
     expect(test.count(1)).toEqual(1);
