@@ -33,8 +33,8 @@ describe('Lru', () => {
     expect(test.count(1)).toEqual(1);
     expect(test.count(1)).toEqual(1);
     expect(test.count(2)).toEqual(2);
-    expect(test.count(2)).toEqual(2);
     expect(test.count(1, 2)).toEqual(3);
+    expect(test.count(2)).toEqual(2);
   });
 
   it('should work call hash function', () => {
