@@ -1,19 +1,6 @@
-<p align="center">
-<img 
-    src="assets/ngx-logo.png" width="160" border="0" alt="NGX-PIPES">
-<br/><br/>
-<a href="https://www.npmjs.com/package/ngx-pipes"><img src="https://img.shields.io/npm/v/ngx-pipes.svg?style=flat-square" alt="npm"></a>
-<a href="http://packagequality.com/#?package=ngx-pipes"><img src="https://npm.packagequality.com/shield/ngx-pipes.svg?style=flat-square" alt="Package Quality"></a>
-<a href="https://travis-ci.org/danrevah/ngx-pipes"><img src="https://img.shields.io/travis/danrevah/ngx-pipes.svg?style=flat-square" alt="Travis"></a>
-<a href="https://coveralls.io/github/danrevah/ngx-pipes?branch=master"><img src="https://img.shields.io/coveralls/danrevah/ngx-pipes.svg?style=flat-square" alt="Coveralls"></a>
-<a href="https://www.npmjs.com/package/ngx-pipes"><img src="https://img.shields.io/npm/dm/ngx-pipes.svg?style=flat-square" alt="npm"></a>
-<a href="https://github.com/danrevah/ngx-pipes/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="MIT licensed"></a>
-<br/><br/>
- Useful pipes for Angular with no external dependencies
-<br/><br/>
-</p>
+# Essential Decorators
 
-<b><a href="https://github.com/danrevah/typeserializer" target="_blank">TypeSerializer</a> - Another library you might find interesting. Serializer / Deserializer, designed to make prettier code while using decorators (Can be used both with Angular or Node.js).</b>
+Useful helpers and utilities as TypeScript decorators
 
 ## Table of contents
 
