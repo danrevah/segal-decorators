@@ -24,7 +24,7 @@ Use npm to install the package
 
 ### Memoize
 
-Memoize the function by using the cached result. if `hashFn` is passed it is used to compute the hash key. default hash function is using `JSON.stringify` on the original function arguments.
+Memoize the function by using the cached result. If `hashFn` is passed it is used to compute the hash key. default hash function is using `JSON.stringify` on the original function arguments.
 
 ``function Memoize(hashFn?: (...args: any[]) => string)``
 
@@ -53,7 +53,7 @@ Timed memoization, similar to [Memoize](#memoize), requires an additional parame
   
 
 ``function TimedMemoize(timeoutMs: number, props: ITimedMemoizeProps = {})``
-```
+```typescript
 interface ITimedMemoizeProps {
   hashFn?: (...args: any[]) => string;
   invalidateOnTimeout?: boolean;
