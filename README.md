@@ -28,6 +28,8 @@ Memoize the function by using the cached result. If `hashFn` is passed it is use
 
 ``function Memoize(hashFn?: (...args: any[]) => string)``
 
+##### Usage
+
 ```typescript
 import { Memoize } from 'essential-decorators';
 
@@ -61,8 +63,9 @@ interface ITimedMemoizeProps {
 ```
 
 ##### Props
-`invalidateOnTimeout` (default=false): If set to true it will invoke a setTimeout() function after timeoutMs to remove the cached result. Otherwise it will keep and ignore it after timeout passed. 
+`invalidateOnTimeout` (default=false): If set to true it will invoke a `setTimeout()` function after timeoutMs to remove the cached result. Otherwise it will keep and ignore it after timeout passed. 
 
+##### Usage
 ```typescript
 import { TimedMemoize } from 'essential-decorators';
 
@@ -93,6 +96,8 @@ Least-recently-used memoization, similar to [Memoize](#memoize), requires an add
   
 
 ``function LruMemoize(maxStorage: number, hashFn?: (...args: any[]) => string)``
+
+##### Usage
 
 ```typescript
 import { LruMemoize } from 'essential-decorators';
