@@ -13,14 +13,14 @@ export class LRU<T> {
   private head: Node<T> | undefined;
   private tail: Node<T> | undefined;
 
-  constructor(private maxStorage: number) {}
+  constructor(private maxRecords: number) {}
 
   get(key: string): T | undefined {
     return !isUndefined(this.cache[key]) ? this.cache[key].value : undefined;
   }
 
   insert(key: string, value: T): void {
-    if (this.totalStorage >= this.maxStorage) {
+    if (this.totalStorage >= this.maxRecords) {
       if (!isUndefined(this.get(key))) {
         this.remove(key);
       } else {

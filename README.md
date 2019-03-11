@@ -99,7 +99,7 @@ Least-recently-used memoization, similar to [Memoize](#memoize), requires an add
   
 ##### Declaration
 
-``function LruMemoize(maxStorage: number, hashFn?: (...args: any[]) => string)``
+``function LruMemoize(maxRecords: number, hashFn?: (...args: any[]) => string)``
 
 ##### Usage
 
