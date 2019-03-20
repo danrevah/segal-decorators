@@ -21,7 +21,7 @@ class TestMemoize {
   }
 }
 
-describe('Lru', () => {
+describe('Memoize', () => {
   it('should memoize values', () => {
     const test = new TestMemoize();
     expect(test.count()).toEqual(1);
