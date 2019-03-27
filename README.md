@@ -140,13 +140,11 @@ class Foo {
   }
 }
 
-console.log(test.call()); 
-console.log(test.call());
-// both outputs only one `1` (AFTER: 2 seconds!)
+console.log(test.call()); // Does not output anything since it's called again with-in the 2 second time-frame.
+console.log(test.call()); // Outputs: 1 (AFTER 2 SECONDS)
 
 setTimeout(() => {
-  console.log(test.call());
-  // Outputs: 1 (AFTER: 5 seconds!)
+  console.log(test.call()); // Outputs: 1 (AFTER ADDITIONAL 2 SECONDS)
 }, 3000)
 ```
 
@@ -172,13 +170,12 @@ class Foo {
   }
 }
 
-console.log(test.call()); 
-console.log(test.call());
-// both outputs only one `1`
+console.log(test.call()); // Outputs: 1
+console.log(test.call()); // Does not output anything since it's called again with-in the 2 second time-frame.
 
 setTimeout(() => {
   console.log(test.call());
-  // Outputs: 1 (since 3000 sec have elapsed since last call)
+  // Outputs: 1 
 }, 3000)
 ```
 
