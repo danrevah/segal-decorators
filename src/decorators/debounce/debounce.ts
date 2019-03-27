@@ -1,6 +1,6 @@
 import { generateFunctionDecorator } from '../../helpers/general';
 
-export async function Debounce(timeMs: number) {
+export function Debounce(timeMs: number) {
   return generateFunctionDecorator('Debounce', decorator, timeMs);
 }
 

@@ -11,6 +11,10 @@ Useful helpers and utilities as TypeScript decorators
     - [Memoize](#memoize)
     - [Timed Memoize](#timed-memoize)
     - [Lru Memoize](#lru-memoize)
+    - [Debounce](#debounce)
+    - [Throttle](#throttle)
+    - [Async Retry](#async-retry)
+    - [Once](#once)
 
 ## Installation
 
@@ -112,6 +116,72 @@ console.log(test.count(3)); // State of LRU Cache=[3, 2], Outputs: 3
 console.log(test.count(2)); // State of LRU Cache=[2, 3], Outputs: 2
 console.log(test.count(1)); // State of LRU Cache=[1, 2], Outputs: 4
 ```
+
+
+### Debounce
+
+Function which will postpone its execution until after `timeMs` have elapsed since the last time it was invoked.
+
+##### Declaration
+
+``function Debounce(timeMs: number)``
+
+##### Usage
+
+```typescript
+import { Debounce } from 'essential-decorators';
+
+class Foo {
+  counter = 0;
+  
+  @Debounce(2000)
+  call() {
+    return ++this.counter;
+  }
+}
+
+console.log(test.call()); 
+console.log(test.call());
+// both outputs only one `1` (AFTER: 2 seconds!)
+
+setTimeout(() => {
+  console.log(test.call());
+  // Outputs: 1 (AFTER: 5 seconds!)
+}, 3000)
+```
+
+### Throttle
+
+When invoked repeatedly, will only call the original function at most once per every `timeMs`.
+ 
+##### Declaration
+
+``function Throttle(timeMs: number)``
+
+##### Usage
+
+```typescript
+import { Throttle } from 'essential-decorators';
+
+class Foo {
+  counter = 0;
+  
+  @Throttle(2000)
+  call() {
+    return ++this.counter;
+  }
+}
+
+console.log(test.call()); 
+console.log(test.call());
+// both outputs only one `1`
+
+setTimeout(() => {
+  console.log(test.call());
+  // Outputs: 1 (since 3000 sec have elapsed since last call)
+}, 3000)
+```
+
 
 ### AsyncRetry
 
