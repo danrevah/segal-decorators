@@ -4,11 +4,7 @@ export function TimedMemoize(timeoutMs: number, hashFn?: (...args: any[]) => str
   return generateFunctionDecorator('TimedMemoize', decorator, timeoutMs, hashFn);
 }
 
-function decorator<T>(
-  fn: (...args: any[]) => any,
-  timeoutMs: number,
-  hashFn?: (...args: any[]) => string
-) {
+function decorator<T>(fn: (...args: any[]) => any, timeoutMs: number, hashFn?: (...args: any[]) => string) {
   const cache: { [key: string]: { value: string; timeoutTimestamp: number } } = {};
 
   return function(...args: any[]) {

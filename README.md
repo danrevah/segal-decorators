@@ -113,24 +113,58 @@ console.log(test.count(2)); // State of LRU Cache=[2, 3], Outputs: 2
 console.log(test.count(1)); // State of LRU Cache=[1, 2], Outputs: 4
 ```
 
-### Retry
+### AsyncRetry
 
-@Todo
+In-case an exception has been thrown, it will retry the action up to `retries` amount of times with a `restMs` delay between attempts.
+
+##### Declaration
+
+``function AsyncRetry(retries: number, restMs: number = 100)``
+
+##### Usage
+
+```typescript
+import { AsyncRetry } from 'essential-decorators';
+
+class Foo {
+  counter = 0;
+  
+  @AsyncRetry(2)
+  doSomething() {
+    return requestServerSomething()
+  }
+}
+
+// in-case of a failure will try twice before throwing an exception
+console.log(test.doSomething()); 
+```
 
 
 ### Once
 
-@Todo
+Function will be called exactly once. Repeated calls will have no effect, returning the value from the first call.
 
+##### Declaration
 
-### Delay
+``function Once()``
 
-@todo 
+##### Usage
 
-### After
+```typescript
+import { Once } from 'essential-decorators';
 
-@todo 
+class Foo {
+  counter = 0;
+  
+  @Once()
+  count(...args: string[]) {
+    return ++this.counter;
+  }
+}
 
-### Before
+console.log(test.count()); // Outputs: 1
+console.log(test.count()); // Outputs: 1
+console.log(test.count(1)); // Outputs: 1
+console.log(test.count(1, 2)); // Outputs: 1
+```
 
-@todo

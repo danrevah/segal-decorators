@@ -1,4 +1,4 @@
-import { generateFunctionDecorator, isUndefined } from '../../helpers/general';
+import { generateFunctionDecorator } from '../../helpers/general';
 
 export function Once() {
   return generateFunctionDecorator('Once', decorator);
@@ -15,6 +15,6 @@ function decorator(fn: (...args: any[]) => any) {
 
     called = true;
 
-    return returnValue = fn.apply(this, args);
+    return (returnValue = fn.apply(this, args));
   };
 }
