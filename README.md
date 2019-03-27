@@ -120,7 +120,7 @@ console.log(test.count(1)); // State of LRU Cache=[1, 2], Outputs: 4
 
 ### Debounce
 
-Function which will postpone its execution until after `timeMs` have elapsed since the last time it was invoked.
+Postpone its execution until after `timeMs` have elapsed since the last time it was invoked.
 
 ##### Declaration
 
@@ -212,7 +212,7 @@ console.log(test.doSomething());
 
 ### Once
 
-Function will be called exactly once. Repeated calls will have no effect, returning the value from the first call.
+Called exactly once. Repeated calls will have no effect, returning the value from the first call.
 
 ##### Declaration
 
