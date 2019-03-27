@@ -1,18 +1,13 @@
 import { generateFunctionDecorator, isUndefined } from '../../helpers/general';
 
-interface ITimedMemoizeProps {
-  hashFn?: (...args: any[]) => string;
-  invalidateOnTimeout?: boolean;
-}
-
-export function TimedMemoize(timeoutMs: number, props: ITimedMemoizeProps = {}) {
-  return generateFunctionDecorator('TimedMemoize', decorator, timeoutMs, props);
+export function TimedMemoize(timeoutMs: number, hashFn?: (...args: any[]) => string) {
+  return generateFunctionDecorator('TimedMemoize', decorator, timeoutMs, hashFn);
 }
 
 function decorator<T>(
   fn: (...args: any[]) => any,
   timeoutMs: number,
-  { hashFn, invalidateOnTimeout }: ITimedMemoizeProps
+  hashFn?: (...args: any[]) => string
 ) {
   const cache: { [key: string]: { value: string; timeoutTimestamp: number } } = {};
 
@@ -29,9 +24,7 @@ function decorator<T>(
       timeoutTimestamp: now + timeoutMs,
     };
 
-    if (invalidateOnTimeout) {
-      setTimeout(() => delete cache[key], timeoutMs);
-    }
+    setTimeout(() => delete cache[key], timeoutMs);
 
     return cache[key].value;
   };

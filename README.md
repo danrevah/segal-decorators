@@ -57,16 +57,7 @@ Timed memoization, similar to [Memoize](#memoize), requires an additional parame
   
 
 ##### Declaration
-``function TimedMemoize(timeoutMs: number, props: ITimedMemoizeProps = {})``
-```typescript
-interface ITimedMemoizeProps {
-  hashFn?: (...args: any[]) => string;
-  invalidateOnTimeout?: boolean;
-}
-```
-
-##### Props
-`invalidateOnTimeout` (default=false): If set to true it will invoke a `setTimeout()` function after timeoutMs to remove the cached result. Otherwise it will keep and ignore it after timeout passed. 
+``function TimedMemoize(timeoutMs: number, hashFn?: (...args: any[]) => string)``
 
 ##### Usage
 ```typescript
@@ -121,3 +112,25 @@ console.log(test.count(3)); // State of LRU Cache=[3, 2], Outputs: 3
 console.log(test.count(2)); // State of LRU Cache=[2, 3], Outputs: 2
 console.log(test.count(1)); // State of LRU Cache=[1, 2], Outputs: 4
 ```
+
+### Retry
+
+@Todo
+
+
+### Once
+
+@Todo
+
+
+### Delay
+
+@todo 
+
+### After
+
+@todo 
+
+### Before
+
+@todo
