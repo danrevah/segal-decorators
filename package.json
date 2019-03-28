@@ -1,6 +1,6 @@
 {
   "name": "segal-decorators",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "essential-decorators, useful helpers and utilities as TypeScript decorators",
   "main": "dist/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danrevah/essentialdecorators.git"
+    "url": "git+https://github.com/danrevah/segal-decorators.git"
   },
   "keywords": [
     "typescript",
@@ -33,9 +33,9 @@
   "author": "Dan Revah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danrevah/essentialdecorators/issues"
+    "url": "https://github.com/danrevah/segal-decorators/issues"
   },
-  "homepage": "https://github.com/danrevah/essentialdecorators#readme",
+  "homepage": "https://github.com/danrevah/segal-decorators#readme",
   "devDependencies": {
     "@commitlint/cli": "^7.6.1",
     "@commitlint/config-conventional": "^7.6.0",
