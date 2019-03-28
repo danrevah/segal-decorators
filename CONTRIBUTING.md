@@ -6,7 +6,7 @@
 1. Clone the project, and install dependencies.
 
 ```bash
-$ git clone https://github.com/danrevah/essential-decorators.git
+$ git clone https://github.com/danrevah/segal-decorators.git
 $ npm install
 ```
 

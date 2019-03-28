@@ -1,4 +1,4 @@
-# Essential Decorators
+# Segal Decorators
 
 Useful helpers and utilities as TypeScript decorators
 
@@ -21,7 +21,7 @@ Useful helpers and utilities as TypeScript decorators
 Use npm to install the package
 
   ```terminal
-  $ npm install essential-decorators --save 
+  $ npm install segal-decorators --save 
   ```
 
 ## Decorators
@@ -37,7 +37,7 @@ Memoize the function by using the cached result. If `hashFn` is passed it is use
 ##### Usage
 
 ```typescript
-import { Memoize } from 'essential-decorators';
+import { Memoize } from 'segal-decorators';
 
 class Foo {
   counter = 0;
@@ -65,7 +65,7 @@ Timed memoization, similar to [Memoize](#memoize), requires an additional parame
 
 ##### Usage
 ```typescript
-import { TimedMemoize } from 'essential-decorators';
+import { TimedMemoize } from 'segal-decorators';
 
 class Foo {
   counter = 0;
@@ -99,7 +99,7 @@ Least-recently-used memoization, similar to [Memoize](#memoize), requires an add
 ##### Usage
 
 ```typescript
-import { LruMemoize } from 'essential-decorators';
+import { LruMemoize } from 'segal-decorators';
 
 class Foo {
   counter = 0;
@@ -129,7 +129,7 @@ Postpone its execution until after `timeMs` have elapsed since the last time it 
 ##### Usage
 
 ```typescript
-import { Debounce } from 'essential-decorators';
+import { Debounce } from 'segal-decorators';
 
 class Foo {
   counter = 0;
@@ -159,7 +159,7 @@ When invoked repeatedly, will only call the original function at most once per e
 ##### Usage
 
 ```typescript
-import { Throttle } from 'essential-decorators';
+import { Throttle } from 'segal-decorators';
 
 class Foo {
   counter = 0;
@@ -191,7 +191,7 @@ In-case an exception has been thrown, it will retry the action up to `retries` a
 ##### Usage
 
 ```typescript
-import { AsyncRetry } from 'essential-decorators';
+import { AsyncRetry } from 'segal-decorators';
 
 class Foo {
   counter = 0;
@@ -218,7 +218,7 @@ Called exactly once. Repeated calls will have no effect, returning the value fro
 ##### Usage
 
 ```typescript
-import { Once } from 'essential-decorators';
+import { Once } from 'segal-decorators';
 
 class Foo {
   counter = 0;

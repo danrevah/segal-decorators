@@ -1,5 +1,5 @@
 {
-  "name": "essential-decorators",
+  "name": "segal-decorators",
   "version": "0.0.1",
   "description": "essential-decorators, useful helpers and utilities as TypeScript decorators",
   "main": "dist/index.js",
