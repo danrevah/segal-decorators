@@ -180,7 +180,7 @@ setTimeout(() => {
 ```
 
 
-### AsyncRetry
+### Async Retry
 
 In-case an exception has been thrown, it will retry the action up to `retries` amount of times with a `restMs` delay between attempts.
 
@@ -203,7 +203,11 @@ class Foo {
 }
 
 // in-case of a failure will try twice before throwing an exception
-console.log(test.doSomething()); 
+test.doSomething().then((response) => {
+  // Reach here if succeed in one of the 2 attempts
+}).catch(() => {
+  // Reach here if failed after 2 attempts
+})
 ```
 
 
