@@ -1,7 +1,7 @@
 import { generateFunctionDecorator, isUndefined } from '../../helpers/general';
 
-export function TimedMemoize(timeoutMs: number, hashFn?: (...args: any[]) => string) {
-  return generateFunctionDecorator('TimedMemoize', decorator, timeoutMs, hashFn);
+export function TimeMemoize(timeoutMs: number, hashFn?: (...args: any[]) => string) {
+  return generateFunctionDecorator('TimeMemoize', decorator, timeoutMs, hashFn);
 }
 
 function decorator<T>(fn: (...args: any[]) => any, timeoutMs: number, hashFn?: (...args: any[]) => string) {

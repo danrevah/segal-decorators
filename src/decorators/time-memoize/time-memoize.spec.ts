@@ -1,18 +1,18 @@
-import { TimedMemoize } from './timed-memoize';
+import { TimeMemoize } from './time-memoize';
 
-class TestTimedMemoize {
+class TestTimeMemoize {
   counter = 0;
 
-  @TimedMemoize(2000)
+  @TimeMemoize(2000)
   count(...args: any[]) {
     return ++this.counter;
   }
 }
 
-describe('TimedMemoize', () => {
+describe('TimeMemoize', () => {
   it('should really invalidate cache', () => {
     const past = Date.now() + 50000;
-    const test = new TestTimedMemoize();
+    const test = new TestTimeMemoize();
     expect(test.count(1)).toEqual(1);
 
     jest.spyOn(Date, 'now').mockImplementation(() => past);

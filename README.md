@@ -9,7 +9,7 @@ Useful helpers and utilities as TypeScript decorators
  - [Changelog](CHANGELOG.md)
  - [Decorators](#decorators)   
     - [Memoize](#memoize)
-    - [Timed Memoize](#timed-memoize)
+    - [Time Memoize](#time-memoize)
     - [Lru Memoize](#lru-memoize)
     - [Debounce](#debounce)
     - [Throttle](#throttle)
@@ -55,22 +55,22 @@ console.log(test.count(1, 2)); // Outputs: 3
 console.log(test.count(2)); // Outputs: 2
 ```
 
-### Timed Memoize
+### Time Memoize
 
-Timed memoization, similar to [Memoize](#memoize), requires an additional parameter `timeoutMs` to determine the amount of time in milliseconds to cache the result.
+Time memoization, similar to [Memoize](#memoize), requires an additional parameter `timeoutMs` to determine the amount of time in milliseconds to cache the result.
   
 
 ##### Declaration
-``function TimedMemoize(timeoutMs: number, hashFn?: (...args: any[]) => string)``
+``function TimeMemoize(timeoutMs: number, hashFn?: (...args: any[]) => string)``
 
 ##### Usage
 ```typescript
-import { TimedMemoize } from 'segal-decorators';
+import { TimeMemoize } from 'segal-decorators';
 
 class Foo {
   counter = 0;
   
-  @TimedMemoize(2000)
+  @TimeMemoize(2000)
   count(...args: any[]) {
     return ++this.counter;
   }
