@@ -1,6 +1,6 @@
 # Segal Decorators
 
-Useful helpers and utilities as TypeScript decorators
+Bunch of useful decorators
 
 ## Table of contents
 
