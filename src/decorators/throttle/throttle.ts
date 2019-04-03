@@ -1,4 +1,4 @@
-import { generateFunctionDecorator } from '../../helpers/general';
+import { generateFunctionDecorator, isUndefined } from '../../helpers/general';
 
 export function Throttle(timeMs: number) {
   return generateFunctionDecorator('Throttle', decorator, timeMs);
@@ -11,7 +11,7 @@ function decorator(fn: (...args: any[]) => any, timeMs: number) {
   return function(...args: any[]) {
     const now = Date.now();
 
-    if (!nextCall || nextCall <= timeMs) {
+    if (isUndefined(nextCall) || nextCall <= timeMs) {
       nextCall = now + timeMs;
 
       return fn.apply(this, args);
