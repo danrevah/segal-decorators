@@ -1,0 +1,11 @@
+sudo: required
+language: node_js
+node_js:
+  - current
+  - stable
+  - 8
+  - 7
+  - 6
+
+after_success: 
+  - npm run cover | coveralls
