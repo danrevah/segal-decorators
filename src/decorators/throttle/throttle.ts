@@ -17,8 +17,12 @@ function decorator(fn: (...args: any[]) => any, timeMs: number) {
       return fn.apply(this, args);
     } else {
       const remaining = nextCall - now;
+
       timeout && clearTimeout(timeout);
-      timeout = setTimeout(() => fn.apply(this, args), remaining);
+      timeout = setTimeout(() => {
+        nextCall = now + timeMs;
+        fn.apply(this, args);
+      }, remaining);
     }
   };
 }
