@@ -182,8 +182,7 @@ console.log(test.call()); // Outputs: 1
 console.log(test.call()); // Does not output anything since it's called again with-in the 2 second time-frame.
 
 setTimeout(() => {
-  console.log(test.call());
-  // Outputs: 1 (AFTER ADDITIONAL 1 SECOND) 
+  console.log(test.call()); // Outputs: 1 (AFTER ADDITIONAL 1 SECOND) 
 }, 1000)
 ```
 
