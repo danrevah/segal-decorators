@@ -183,8 +183,8 @@ console.log(test.call()); // Does not output anything since it's called again wi
 
 setTimeout(() => {
   console.log(test.call());
-  // Outputs: 1 
-}, 3000)
+  // Outputs: 1 (AFTER ADDITIONAL 1 SECOND) 
+}, 1000)
 ```
 
 
