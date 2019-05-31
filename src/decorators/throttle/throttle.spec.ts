@@ -8,10 +8,6 @@ class TestThrottle {
   count() {
     ++this.counter;
   }
-
-  save(value: string) {
-    this.value = value;
-  }
 }
 
 describe('TestThrottle', () => {
