@@ -2,6 +2,7 @@
 
 :dizzy: Bunch of highly useful decorators, helps in writing a more concise code while improving readability.
 
+
 ## Table of contents
 
  - [Installation](#installation)
