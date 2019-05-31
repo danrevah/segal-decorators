@@ -2,6 +2,13 @@
 
 :dizzy: Bunch of highly useful decorators, helps in writing a more concise code while improving readability.
 
+<p align="center">
+<br/>
+<a href="https://www.npmjs.com/package/segal-decorators"><img src="https://img.shields.io/npm/v/segal-decorators.svg?style=flat-square" alt="npm"></a>
+<a href="https://travis-ci.org/danrevah/segal-decorators"><img src="https://travis-ci.org/danrevah/segal-decorators.svg?branch=master" alt="Build Status"></a>
+<a href="https://github.com/danrevah/segal-decorators/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="MIT licensed"></a>
+</p> 
+
 
 ## Table of contents
 
