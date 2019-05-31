@@ -1,6 +1,6 @@
 # Segal Decorators
 
-:dizzy: Bunch of useful decorators for TypeScript
+:dizzy: Bunch of useful decorators
 
 ## Table of contents
 
