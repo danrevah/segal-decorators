@@ -5,7 +5,6 @@ export function Throttle(timeMs: number) {
 }
 
 function decorator(fn: (...args: any[]) => any, timeMs: number) {
-  let timeout: NodeJS.Timeout;
   let nextCall: number;
 
   return function(...args: any[]) {
@@ -15,10 +14,6 @@ function decorator(fn: (...args: any[]) => any, timeMs: number) {
       nextCall = now + timeMs;
 
       return fn.apply(this, args);
-    } else {
-      const remaining = nextCall - now;
-      timeout && clearTimeout(timeout);
-      timeout = setTimeout(() => fn.apply(this, args), remaining);
     }
   };
 }
