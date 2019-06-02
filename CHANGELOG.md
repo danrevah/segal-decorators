@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/danrevah/segal-decorators/compare/v0.2.0...v0.3.0) (2019-06-02)
+
+
+### Bug Fixes
+
+* **throttle:** behaviour wasn't specified correctly ([bc1e89c](https://github.com/danrevah/segal-decorators/commit/bc1e89c))
+* **throttle:** behaviour wasn't specified correctly ([c29c3bc](https://github.com/danrevah/segal-decorators/commit/c29c3bc))
+* **throttle:** fixing throttle behaviour ([453dde5](https://github.com/danrevah/segal-decorators/commit/453dde5))
+
+
+### Features
+
+* **bind:** added bind decorator ([02cee04](https://github.com/danrevah/segal-decorators/commit/02cee04))
+* **bind:** added bind decorator ([c6162a5](https://github.com/danrevah/segal-decorators/commit/c6162a5))
+
+
+
 ## 0.2.0 (2019-05-31)
 
 
