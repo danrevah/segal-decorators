@@ -1,7 +1,7 @@
 import { isFunction } from '../../helpers/general';
 
 export function Bind(target: object, propertyKey: string, descriptor: PropertyDescriptor): PropertyDescriptor {
-  if(!descriptor || !isFunction(descriptor.value)) {
+  if (!descriptor || !isFunction(descriptor.value)) {
     throw `Only put a @Bind decorator on a method or get accessor.`;
   }
 
@@ -17,6 +17,6 @@ export function Bind(target: object, propertyKey: string, descriptor: PropertyDe
       });
 
       return withBind;
-    }
+    },
   };
 }
