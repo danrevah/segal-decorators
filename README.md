@@ -22,6 +22,7 @@
     - [Debounce](#debounce)
     - [Throttle](#throttle)
     - [Async Retry](#async-retry)
+    - [Bind](#bind)
     - [Once](#once)
 
 ## Installation
