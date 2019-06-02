@@ -1,9 +1,13 @@
-export function isObject(val: any) {
+export function isObject(val: unknown) {
   return typeof val === 'object' && val !== null && !Array.isArray(val);
 }
 
-export function isUndefined(val: any) {
+export function isUndefined(val: unknown) {
   return typeof val === 'undefined';
+}
+
+export function isFunction(val: unknown) {
+  return typeof val === 'function';
 }
 
 export function generateFunctionDecorator(name: string, decorator: (...args: any[]) => any, ...args: any[]) {

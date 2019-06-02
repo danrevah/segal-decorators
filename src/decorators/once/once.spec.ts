@@ -9,7 +9,7 @@ class TestOnce {
   }
 }
 
-describe('Memoize', () => {
+describe('Once', () => {
   it('should be called only once', () => {
     const test = new TestOnce();
     expect(test.count()).toEqual(1);
