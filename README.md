@@ -42,6 +42,10 @@ Memoize the function by using the cached result. If `hashFn` is passed it is use
 
 ``function Memoize(hashFn?: (...args: any[]) => string)``
 
+##### Alias
+
+`@memoize`
+
 ##### Usage
 
 ```typescript
@@ -70,6 +74,10 @@ Time memoization, similar to [Memoize](#memoize), requires an additional paramet
 
 ##### Declaration
 ``function TimeMemoize(timeoutMs: number, hashFn?: (...args: any[]) => string)``
+
+##### Alias
+
+`@timeMemoize`
 
 ##### Usage
 ```typescript
@@ -104,6 +112,10 @@ Least-recently-used memoization, similar to [Memoize](#memoize), requires an add
 
 ``function LruMemoize(maxRecords: number, hashFn?: (...args: any[]) => string)``
 
+##### Alias
+
+`@lruMemoize`
+
 ##### Usage
 
 ```typescript
@@ -134,6 +146,10 @@ Postpone its execution until after `timeMs` have elapsed since the last time it 
 
 ``function Debounce(timeMs: number)``
 
+##### Alias
+
+`@debounce`
+
 ##### Usage
 
 ```typescript
@@ -163,6 +179,10 @@ When invoked repeatedly, will only call the original function at most once per e
 ##### Declaration
 
 ``function Throttle(timeMs: number)``
+
+##### Alias
+
+`@throttle`
 
 ##### Usage
 
@@ -195,6 +215,10 @@ In-case an exception has been thrown, it will retry the action up to `retries` a
 
 ``function AsyncRetry(retries: number, restMs: number = 100)``
 
+##### Alias
+
+`@asyncRetry`
+
 ##### Usage
 
 ```typescript
@@ -218,6 +242,43 @@ test.doSomething().then((response) => {
 ```
 
 
+### Bind
+
+Binding methods to instance, making sure `this` is always set properly.
+
+##### Declaration
+
+``function Bind()`` 
+
+##### Alias
+
+`@bind`
+
+##### Usage
+
+```typescript
+import { bind } from 'segal-decorators';
+
+class Foo {
+  counter = 0;
+  
+  countWithout() {
+    console.log(++this.counter)
+  }
+  
+  @bind
+  count() {
+    console.log(++this.counter)
+  }
+}
+
+const foo = new Foo();
+
+setTimeout(foo.countWithout); // throws an error ('this' is undefined)
+setTimeout(foo.count); // Outputs: 1
+```
+
+
 ### Once
 
 Called exactly once. Repeated calls will have no effect, returning the value from the first call.
@@ -225,6 +286,10 @@ Called exactly once. Repeated calls will have no effect, returning the value fro
 ##### Declaration
 
 ``function Once()``
+
+##### Alias
+
+`@once`
 
 ##### Usage
 
