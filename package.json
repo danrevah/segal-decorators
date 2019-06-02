@@ -1,6 +1,6 @@
 {
   "name": "segal-decorators",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Bunch of useful decorators",
   "main": "dist/index.js",
   "scripts": {
