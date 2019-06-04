@@ -1,6 +1,6 @@
 # Segal Decorators
 
-:dizzy: Bunch of highly useful decorators, helps in writing a more concise code while improving readability.
+:dizzy: Collection of highly useful decorators that help write concise code while also improving readability.
 
 <p align="center">
 <br/>
