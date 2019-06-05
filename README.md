@@ -107,7 +107,7 @@ setTimeout(() => {
 
 ### Lru Memoize
 
-Least-recently-used memoization, similar to [Memoize](#memoize), requires an additional parameter `maxRecords` of the number of records to keep in cache.
+[Least-recently-used](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)) memoization, similar to [Memoize](#memoize), requires an additional parameter `maxRecords` of the number of records to keep in cache.
   
 ##### Declaration
 
